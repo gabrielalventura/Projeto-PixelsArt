@@ -80,7 +80,14 @@ function createButton() {
 }
 createButton();
 
-// function clearMainBoard() {
+const button = document.getElementById('clear-board');
 
-// }
-// button.addEventListener('click', clearMainBoard);
+function clearMainBoard() {
+  const divToClear = document.querySelectorAll('.pixel');
+  for (let index = 0; index < divToClear.length; index += 1) {
+    if (divToClear[index].style.backgroundColor !== 'white') {
+      divToClear[index].style.backgroundColor = 'white';
+    }
+  }
+}
+button.addEventListener('click', clearMainBoard);

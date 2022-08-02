@@ -60,3 +60,23 @@ function changeClass(palette) {
   palette.target.classList.add('selected');
 }
 mainPalette.addEventListener('click', changeClass);
+
+function createButton() {
+  const button = document.createElement('button');
+  const mainBoard = document.getElementById('pixel-board');
+  button.innerText = 'Limpar';
+  fatherOfAll.appendChild(button);
+  mainBoard.before(button);
+  button.id = 'clear-board';
+}
+createButton();
+
+const button = document.getElementById('clear-board');
+
+function clearMainBoard() {
+  const miniBoards = document.getElementsByClassName('pixel');
+  for (let index = 0; index < miniBoards.length; index += 1) {
+    miniBoards[index].style.backgroundColor = 'white';
+    }
+  }
+button.addEventListener('click', clearMainBoard);

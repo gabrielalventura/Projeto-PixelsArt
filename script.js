@@ -1,5 +1,6 @@
+const fatherOfAll = document.getElementsByTagName('body')[0];
+
 function createMainPalette() {
-  const fatherOfAll = document.getElementsByTagName('body')[0];
   const mainPalette = document.createElement('div');
   fatherOfAll.appendChild(mainPalette);
   mainPalette.id = 'color-palette';
@@ -36,3 +37,10 @@ function fillThePalettes() {
   violet.id = 'violet';
 }
 fillThePalettes();
+
+function createMainBoard() {
+  const mainBoard = document.createElement('div');
+  fatherOfAll.appendChild(mainBoard);
+  mainBoard.id = 'pixel-board';
+}
+createMainBoard();

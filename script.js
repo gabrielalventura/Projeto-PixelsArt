@@ -14,6 +14,7 @@ function createMainPalette() {
       if (index === 0) {
         individualPalettes.id = 'black';
         individualPalettes.style.backgroundColor = 'black';
+        individualPalettes.classList.add('selected');
       }
     }
   }

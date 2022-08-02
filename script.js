@@ -65,8 +65,9 @@ const mainBoard = document.getElementById('pixel-board');
 
 function fillTheBoard(colorEvent) {
   const newColor = document.querySelector('.selected');
-  if (colorEvent.target.className === 'pixel') {
-    colorEvent.target.style.backgroundColor = newColor.style.backgroundColor;
+  const event = colorEvent.target;
+  if (event.className === 'pixel') {
+    event.style.backgroundColor = newColor.style.backgroundColor;
   }
 }
 mainBoard.addEventListener('click', fillTheBoard);

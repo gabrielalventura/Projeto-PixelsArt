@@ -1,7 +1,7 @@
 const fatherOfAll = document.getElementsByTagName('body')[0];
+const mainPalette = document.createElement('div');
 
 function createMainPalette() {
-  const mainPalette = document.createElement('div');
   fatherOfAll.appendChild(mainPalette);
   mainPalette.id = 'color-palette';
 
@@ -53,3 +53,10 @@ function createMainBoard() {
   createIndividualPixels();
 }
 createMainBoard();
+
+function changeClass(palette) {
+  const selectedColor = document.querySelector('.selected');
+  selectedColor.classList.remove('selected');
+  palette.target.classList.add('selected');
+}
+mainPalette.addEventListener('click', changeClass);

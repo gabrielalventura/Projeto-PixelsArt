@@ -42,5 +42,13 @@ function createMainBoard() {
   const mainBoard = document.createElement('div');
   fatherOfAll.appendChild(mainBoard);
   mainBoard.id = 'pixel-board';
+  function createIndividualPixels() {
+    for (let index = 0; index < 25; index += 1) {
+      const individualPixels = document.createElement('div');
+      mainBoard.appendChild(individualPixels);
+      individualPixels.classList = 'pixel';
+    }
+  }
+  createIndividualPixels();
 }
 createMainBoard();

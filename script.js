@@ -61,9 +61,18 @@ function changeClass(palette) {
 }
 mainPalette.addEventListener('click', changeClass);
 
+const mainBoard = document.getElementById('pixel-board');
+
+function fillTheBoard(colorEvent) {
+  const newColor = document.querySelector('.selected');
+  if (colorEvent.target.className === 'pixel') {
+    colorEvent.target.style.backgroundColor = newColor.style.backgroundColor;
+  }
+}
+mainBoard.addEventListener('click', fillTheBoard);
+
 function createButton() {
   const button = document.createElement('button');
-  const mainBoard = document.getElementById('pixel-board');
   button.innerText = 'Limpar';
   fatherOfAll.appendChild(button);
   mainBoard.before(button);
@@ -71,12 +80,7 @@ function createButton() {
 }
 createButton();
 
-const button = document.getElementById('clear-board');
+// function clearMainBoard() {
 
-function clearMainBoard() {
-  const miniBoards = document.getElementsByClassName('pixel');
-  for (let index = 0; index < miniBoards.length; index += 1) {
-    miniBoards[index].style.backgroundColor = 'white';
-  }
-}
-button.addEventListener('click', clearMainBoard);
+// }
+// button.addEventListener('click', clearMainBoard);

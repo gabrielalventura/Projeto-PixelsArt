@@ -77,6 +77,6 @@ function clearMainBoard() {
   const miniBoards = document.getElementsByClassName('pixel');
   for (let index = 0; index < miniBoards.length; index += 1) {
     miniBoards[index].style.backgroundColor = 'white';
-    }
   }
+}
 button.addEventListener('click', clearMainBoard);

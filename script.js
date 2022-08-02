@@ -12,10 +12,27 @@ function createMainPalette() {
       individualPalettes.style.border = '1px solid black';
       if (index === 0) {
         individualPalettes.id = 'black';
-        individualPalettes.classList = 'color selection';
+        individualPalettes.style.backgroundColor = 'black';
       }
     }
   }
   createIndividualPalettes();
 }
 createMainPalette();
+
+function fillThePalettes() {
+  const black = document.getElementById('black');
+
+  const purple = black.nextElementSibling;
+  purple.style.backgroundColor = 'purple';
+  purple.id = 'purple';
+
+  const lilac = purple.nextElementSibling;
+  lilac.style.backgroundColor = '#D291BC';
+  lilac.id = 'lilac';
+
+  const violet = lilac.nextElementSibling;
+  violet.style.backgroundColor = '#E0BBE4';
+  violet.id = 'violet';
+}
+fillThePalettes();

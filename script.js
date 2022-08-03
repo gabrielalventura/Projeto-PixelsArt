@@ -39,20 +39,24 @@ function fillThePalettes() {
 }
 fillThePalettes();
 
-function createMainBoard() {
+function createMainBoard(individual) {
   const mainBoard = document.createElement('div');
   fatherOfAll.appendChild(mainBoard);
   mainBoard.id = 'pixel-board';
+  mainBoard.style.width = `${((individual * 40) + (individual * 2))} px`;
   function createIndividualPixels() {
-    for (let index = 0; index < 25; index += 1) {
+    for (let index = 0; index < (individual * individual); index += 1) {
       const individualPixels = document.createElement('div');
       mainBoard.appendChild(individualPixels);
       individualPixels.classList = 'pixel';
+      individualPixels.style.width = '40px';
+      individualPixels.style.height = '40px';
+      individualPixels.style.backgroundColor = 'white';
     }
   }
   createIndividualPixels();
 }
-createMainBoard();
+createMainBoard(5);
 
 function changeClass(palette) {
   const selectedColor = document.querySelector('.selected');
@@ -97,16 +101,30 @@ function createInput() {
   const choiceBoard = document.createElement('input');
   fatherOfAll.appendChild(choiceBoard);
   choiceBoard.id = 'board-size';
+  choiceBoard.setAttribute('type', 'number');
+  choiceBoard.setAttribute('placeholder', 'Change the board width');
+  choiceBoard.setAttribute('min', '1');
+  button.after(choiceBoard);
+  function createVQV() {
+    const buttonVQV = document.createElement('button');
+    fatherOfAll.appendChild(buttonVQV);
+    buttonVQV.id = 'generate-board';
+    buttonVQV.innerText = 'VQV';
+    choiceBoard.after(buttonVQV);
+  }
+  createVQV();
 }
 createInput();
 
 const choiceBoard = document.getElementById('board-size');
+const buttonVQV = document.getElementById('generate-board');
+function addBoard() {
+  const newBoard = choiceBoard.value;
+  if (newBoard <= 0 || newBoard === '') {
+    alert('Board inválido!');
+  }
+  mainBoard.remove();
+  createMainBoard(choiceBoard.value);
+}
 
-// function createVQV() {
-//   const buttonVQV = document.createElement('button');
-//   choiceBoard.appendChild(buttonVQV);
-//   buttonVQV.id = 'generate-board';
-//   button.innerText = 'VQV';
-//   choiceBoard.nextElementSibling(buttonVQV);
-// }
-// createVQV();
+buttonVQV.addEventListener('click', addBoard);

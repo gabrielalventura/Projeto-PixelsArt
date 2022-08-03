@@ -92,3 +92,21 @@ function clearMainBoard() {
   }
 }
 button.addEventListener('click', clearMainBoard);
+
+function createInput() {
+  const choiceBoard = document.createElement('input');
+  fatherOfAll.appendChild(choiceBoard);
+  choiceBoard.id = 'board-size';
+}
+createInput();
+
+const choiceBoard = document.getElementById('board-size');
+
+// function createVQV() {
+//   const buttonVQV = document.createElement('button');
+//   choiceBoard.appendChild(buttonVQV);
+//   buttonVQV.id = 'generate-board';
+//   button.innerText = 'VQV';
+//   choiceBoard.nextElementSibling(buttonVQV);
+// }
+// createVQV();

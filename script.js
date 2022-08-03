@@ -44,6 +44,7 @@ function createMainBoard(individual) {
   fatherOfAll.appendChild(mainBoard);
   mainBoard.id = 'pixel-board';
   mainBoard.style.width = `${((individual * 40) + (individual * 2))} px`;
+  mainBoard.style.height = `${((individual * 40) + (individual * 2))} px`;
   function createIndividualPixels() {
     for (let index = 0; index < (individual * individual); index += 1) {
       const individualPixels = document.createElement('div');
@@ -102,7 +103,7 @@ function createInput() {
   fatherOfAll.appendChild(choiceBoard);
   choiceBoard.id = 'board-size';
   choiceBoard.setAttribute('type', 'number');
-  choiceBoard.setAttribute('placeholder', 'Change the board width');
+  choiceBoard.setAttribute('placeholder', 'Change the board size');
   choiceBoard.setAttribute('min', '1');
   button.after(choiceBoard);
   function createVQV() {
@@ -120,11 +121,19 @@ const choiceBoard = document.getElementById('board-size');
 const buttonVQV = document.getElementById('generate-board');
 function addBoard() {
   const newBoard = choiceBoard.value;
+  const boardToErase = mainBoard;
   if (newBoard <= 0 || newBoard === '') {
     alert('Board inválido!');
+  } else if (newBoard < 5) {
+    boardToErase.remove();
+    createMainBoard(5);
+  } else if (newBoard > 50) {
+    boardToErase.remove();
+    createMainBoard(50);
+  } else {
+    boardToErase.remove();
+    createMainBoard(newBoard);
   }
-  mainBoard.remove();
-  createMainBoard(choiceBoard.value);
 }
 
 buttonVQV.addEventListener('click', addBoard);

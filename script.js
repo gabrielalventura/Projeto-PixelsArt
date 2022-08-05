@@ -103,7 +103,7 @@ function createInput() {
   fatherOfAll.appendChild(choiceBoard);
   choiceBoard.id = 'board-size';
   choiceBoard.setAttribute('type', 'number');
-  choiceBoard.setAttribute('label', 'Change the board size');
+  choiceBoard.setAttribute('placeholder', 'Change the board size');
   choiceBoard.setAttribute('min', '1');
   button.after(choiceBoard);
   function createVQV() {

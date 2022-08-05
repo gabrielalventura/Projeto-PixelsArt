@@ -1,7 +1,7 @@
 const fatherOfAll = document.getElementsByTagName('body')[0];
 const mainPalette = document.createElement('div');
 
-//Trecho de código retirado do site https://wallacemaxters.com.br/blog/48/como-gerar-cores-aleatorias-no-javascript
+// Trecho de código retirado do site https://wallacemaxters.com.br/blog/48/como-gerar-cores-aleatorias-no-javascript
 
 function generateHexadecimalColor() {
   return '#' + parseInt((Math.random() * 0xFFFFFF))

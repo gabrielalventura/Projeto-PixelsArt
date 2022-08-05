@@ -3,11 +3,11 @@ const mainPalette = document.createElement('div');
 
 // Trecho de código retirado do site https://wallacemaxters.com.br/blog/48/como-gerar-cores-aleatorias-no-javascript
 
-function generateHexadecimalColor() {
-  return '#' + parseInt((Math.random() * 0xFFFFFF))
-    .toString(16)
-    .padStart(6, '0');
-}
+// function generateHexadecimalColor() {
+//   return '#' + parseInt((Math.random() * 0xFFFFFF))
+//     .toString(16)
+//     .padStart(6, '0');
+// }
 // Fim de trecho de código retirado do site https://wallacemaxters.com.br/blog/48/como-gerar-cores-aleatorias-no-javascript
 
 function createMainPalette() {
@@ -35,19 +35,19 @@ function fillThePalettes() {
   const black = document.getElementById('black');
 
   const purple = black.nextElementSibling;
-  // purple.style.backgroundColor = 'purple';
+  purple.style.backgroundColor = 'purple';
   purple.id = 'purple';
-  purple.style.backgroundColor = generateHexadecimalColor();
+  // purple.style.backgroundColor = generateHexadecimalColor();
 
   const lilac = purple.nextElementSibling;
-  // lilac.style.backgroundColor = '#D291BC';
+  lilac.style.backgroundColor = '#D291BC';
   lilac.id = 'lilac';
-  lilac.style.backgroundColor = generateHexadecimalColor();
+  // lilac.style.backgroundColor = generateHexadecimalColor();
 
   const violet = lilac.nextElementSibling;
-  // violet.style.backgroundColor = '#E0BBE4';
+  violet.style.backgroundColor = '#E0BBE4';
   violet.id = 'violet';
-  violet.style.backgroundColor = generateHexadecimalColor();
+  // violet.style.backgroundColor = generateHexadecimalColor();
 }
 fillThePalettes();
 

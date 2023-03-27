@@ -35,19 +35,19 @@ function fillThePalettes() {
   const black = document.getElementById('black');
 
   const purple = black.nextElementSibling;
-  // purple.style.backgroundColor = 'purple';
+  purple.style.backgroundColor = 'purple';
   purple.id = 'purple';
-  purple.style.backgroundColor = generateHexadecimalColor();
+  // purple.style.backgroundColor = generateHexadecimalColor();
 
   const lilac = purple.nextElementSibling;
-  // lilac.style.backgroundColor = '#D291BC';
+  lilac.style.backgroundColor = '#D291BC';
   lilac.id = 'lilac';
-  lilac.style.backgroundColor = generateHexadecimalColor();
+  // lilac.style.backgroundColor = generateHexadecimalColor();
 
   const violet = lilac.nextElementSibling;
-  // violet.style.backgroundColor = '#E0BBE4';
+  violet.style.backgroundColor = '#E0BBE4';
   violet.id = 'violet';
-  violet.style.backgroundColor = generateHexadecimalColor();
+  // violet.style.backgroundColor = generateHexadecimalColor();
 }
 fillThePalettes();
 

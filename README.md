@@ -25,11 +25,11 @@ Este projeto consiste em criar uma página web que permite ao usuário desenhar 
 Para instalar o projeto localmente, você precisa ter o Git instalado no seu computador. Depois, siga os seguintes passos:
 
 Clone o repositório do GitHub usando o comando 
-```javascript
+```bash
 git clone git@github.com:gabrielalventura/Projeto-PixelsArt.git 
 ```
 installe as depensencias usando o comando
-```javascript
+```bash
 npm install
 ```
 

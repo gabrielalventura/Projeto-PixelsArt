@@ -24,17 +24,17 @@ Este projeto consiste em criar uma página web que permite ao usuário desenhar 
   
 Para instalar o projeto localmente, você precisa ter o Git instalado no seu computador. Depois, siga os seguintes passos:
 
-Clone o repositório do GitHub usando o comando 
+1. Clone o repositório do GitHub usando o comando 
 ```bash
 git clone git@github.com:gabrielalventura/Projeto-PixelsArt.git 
 ```
-installe as depensencias usando o comando
+2. Após clonar o repositório entre na pasta do mesmo e instale as dependencias através do comando
 ```bash
 npm install
 ```
 
-Abra o arquivo index.html em um navegador de sua preferência.
-Divirta-se criando a sua arte pixelada!
+3. Abra o arquivo index.html em um navegador de sua preferência.
+4. Divirta-se criando a sua arte pixelada!
 
 # Requisitos desenvolvidos no projeto
 1. Adicione à página uma paleta contendo quatro cores distintas

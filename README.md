@@ -1,4 +1,4 @@
-#  Projeto Pixel Art
+#  Projeto Pixels Art
 
 Este projeto consiste em criar uma página web que permite ao usuário desenhar uma arte pixelada escolhendo as cores de uma paleta. O usuário pode alterar o tamanho da grade de pixels e salvar a sua arte em um arquivo local.
 
